@@ -6,8 +6,10 @@ export default function Layout() {
   return (
     <div className='md:flex'>
       <Sidebar />
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
       <Resumen />
-    </div>
+    </div >
   );
 }

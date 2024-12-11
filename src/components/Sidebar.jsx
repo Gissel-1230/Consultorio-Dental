@@ -4,7 +4,7 @@ import Categoria from './Categoria';
 
 export default function Sidebar() {
     return (
-        <aside className="md:w-96 mx-auto">
+        <aside className="md:w-95 mx-20">
             <div className="p-4">
                 <img
                     className="w-40 mx-auto"
@@ -25,9 +25,9 @@ export default function Sidebar() {
                 ))}
             </div>
 
-            <div className="my-5 px-5">
+            <div className="my-4 px-4">
                 <button type="button"
-                        className="text-center bg-red-500 w-full p-3 font-bold text-white truncate">
+                        className="text-center bg-red-500 w-full p-3 font-bold text-white truncate rounded-lg">
                     Cancelar Cita
                 </button>
             </div>
