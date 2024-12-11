@@ -8,7 +8,7 @@ export default function Inicio() {
             <h1 className='text-4xl font-black'>
                 Inicio - Agenda Tu Cita
             </h1>
-            <div className="grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+            <div className="grid gap-4 grid-cols-1 md:grid-cols-1 xl:grid-cols-2">
                 {servicios.map(servicio => (
                     <Servicio
                         key={servicio.id}

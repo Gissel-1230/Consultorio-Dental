@@ -4,7 +4,7 @@ export default function Servicio({ servicio }) {
     const { nombre, imagen, descripcion } = servicio;
 
     return (
-        <div className='border p-4 shadow bg-white rounded-md hover:bg-blue-100 cursor-pointer transition-all duration-300 w-full h-'>
+        <div className='border p-4 shadow bg-white rounded-md hover:bg-blue-200 cursor-pointer transition-all duration-300 w-full h-52'>
             <img
                 alt={`Imagen de ${nombre}`}
                 className="w-16 h-16 object-cover mx-auto rounded-full"
