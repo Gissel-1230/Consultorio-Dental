@@ -1,8 +1,9 @@
-import React from 'react';
-import categorias from "../data/categorias";
+import useConsultorio from '../hooks/useConsultorio';
 import Categoria from './Categoria';
 
 export default function Sidebar() {
+    const { categorias } = useConsultorio();
+
     return (
         <aside className="md:w-95 mx-20">
             <div className="p-4">
@@ -17,10 +18,7 @@ export default function Sidebar() {
                 {categorias.map(categoria => (
                     <Categoria
                         key={categoria.id}
-                        icono={categoria.icono}
-                        id={categoria.id}
-                        nombre={categoria.nombre}
-                        descripcion={categoria.descripcion}
+                        categoria={categoria}
                     />
                 ))}
             </div>

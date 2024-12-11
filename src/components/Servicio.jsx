@@ -1,7 +1,10 @@
 import React from 'react';
+import useConsultorio from '../hooks/useConsultorio';
 
 export default function Servicio({ servicio }) {
 
+
+    const {handleClickModal, handleSetServicio} = useConsultorio();
     const { nombre, imagen, descripcion } = servicio;
 
     return (
@@ -16,7 +19,11 @@ export default function Servicio({ servicio }) {
                 <p className="text-gray-600 ">{descripcion}</p>
                 <button
                   type="button"
-                  className="bg-indigo-400 hover:bg-indigo-600 text-white w-full mt-2 p-3 font-bold rounded-lg">
+                  className="bg-indigo-400 hover:bg-indigo-600 text-white w-full mt-2 p-3 font-bold rounded-lg"
+                  onClick={()=>{
+                    handleClickModal();
+                    handleSetServicio(servicio);
+                  }}>
                     Agregar Servicio
                 </button>
             </div>

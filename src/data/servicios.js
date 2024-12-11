@@ -78,4 +78,4 @@ const servicios = [
     },
 ];
 
-export default servicios;
+export {servicios};
