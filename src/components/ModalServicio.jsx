@@ -1,11 +1,11 @@
 import useConsultorio from "../hooks/useConsultorio"
+import { useEffect } from "react";
 
 
 export default function ModalServicio() {
 
-    const { servicio, handleClickModal } = useConsultorio();
-    console.log(servicio);
-
+    const { servicio, handleClickModal, handleAgregarServicio, cita } = useConsultorio();
+  
     return (
         <div className="md:flex items-center gap-10">
             <div className="md:w-1/3">
@@ -31,6 +31,10 @@ export default function ModalServicio() {
                 <button
                     type="button"
                     className="bg-indigo-600 hover:bg-indigo-800 px-5 py-2 mt-5 text-white font-bold uppercase rounded"
+                    onClick={() => {
+                        handleAgregarServicio(servicio)
+                        handleClickModal
+                    }}
                 >
                     Añadir Servicio
                 </button>

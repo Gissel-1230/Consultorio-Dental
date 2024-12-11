@@ -3,6 +3,8 @@ import Sidebar from '../components/Sidebar';
 import Resumen from '../components/Resumen';
 import useConsultorio from '../hooks/useConsultorio';
 import Modal from 'react-modal';
+import { ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 import ModalServicio from '../components/ModalServicio';
 
 const customStyles = {
@@ -22,8 +24,8 @@ Modal.setAppElement('#root')
 
 export default function Layout() {
 
-  const { modal, handleClickModal } = useConsultorio();
-  console.log(modal)
+  const { modal } = useConsultorio();
+
 
   return (
     <>
@@ -40,6 +42,8 @@ export default function Layout() {
         <Modal isOpen={modal} style={customStyles}>
           <ModalServicio/>
         </Modal>
+
+        <ToastContainer />
    
     </>
 
